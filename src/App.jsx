@@ -10,7 +10,7 @@ import EventList from './components/EventList'
 import EditTask from './components/EditTask'
 import OutgoingRequests from './components/OutgoingRequests'
 import IncomingRequests from './components/IncomingRequests'
-import Marketplace from './components/Marketplace';
+import Marketplace from './components/Marketplace.jsx';
 
 
 function App() {
