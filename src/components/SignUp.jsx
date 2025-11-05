@@ -17,7 +17,10 @@ export default function SignUp() {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/auth/signup', formData);
+      const res = await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/auth/signup', 
+        formData,
+        { withCredentials: true }
+      );
       alert("Register Succesfully");
       navigate('/login')
       setMessage(res.data.message);
@@ -29,7 +32,7 @@ export default function SignUp() {
    <div className="min-h-screen flex items-center justify-center bg-blue-100 p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6 sm:p-10">
         <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800">Sign Up</h2>
-        {/* {message && <p className="mb-4 text-center text-red-600">{message}</p>} */}
+        {message && <p className="mb-4 text-center text-red-600">{message}</p>}
         <form onSubmit={handleSubmit} className="space-y-5">
           <input
             name="name"
