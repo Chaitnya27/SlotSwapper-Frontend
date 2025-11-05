@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('https://slow-swaaper-backend.vercel.app/api/auth/signup', 
+      const res = await axios.post('https://slotswapper-backend-gmuu.onrender.com/api/auth/signup', 
         formData,
         { withCredentials: true }
       );
