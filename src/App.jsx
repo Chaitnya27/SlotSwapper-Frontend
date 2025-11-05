@@ -6,11 +6,12 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import Layout from './design/Layout'
 import Home from './components/Home'
-import EventList from './components/EventList'
-import EditTask from './components/EditTask'
-import OutgoingRequests from './components/OutgoingRequests'
-import IncomingRequests from './components/IncomingRequests'
-import Marketplace from './components/Marketplace.jsx';
+import Eventlist from './components/EventList'
+import Edittask from './components/EditTask'
+import Marketplace from './components/Marketplace.jsx'
+import Outgoingrequests from './components/Outgoingrequests.jsx'
+import Incomingrequests from './components/IncomingRequests.jsx'
+
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
         path="/events" 
         element={
         <ProtectedRoute>
-          <EventList/>
+          <Eventlist/>
           </ProtectedRoute>
         } />
 
@@ -48,7 +49,7 @@ function App() {
           path="/edit/:id"
           element={
             <ProtectedRoute>
-              <EditTask />
+              <Edittask />
             </ProtectedRoute>
           }/>
 
@@ -65,7 +66,7 @@ function App() {
       path="/swap/incoming"
       element={
         <ProtectedRoute>
-          <IncomingRequests />
+          <Incomingrequests />
         </ProtectedRoute>
       }
     />
@@ -73,7 +74,7 @@ function App() {
       path="/swap/outgoing"
       element={
         <ProtectedRoute>
-          <OutgoingRequests />
+          <Outgoingrequests />
         </ProtectedRoute>
       }
     />

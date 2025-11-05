@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function MarketPlace() {
+export default function Marketplace() {
 const [slots, setSlots] = useState([]);
 
   useEffect(() => {
