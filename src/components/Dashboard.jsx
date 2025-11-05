@@ -9,7 +9,7 @@ export default function Dashboard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = sessionStorage.getItem('token');
-    await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/events', form, {
+    await axios.post('https://slow-swaaper-backend.vercel.app/api/events', form, {
       headers: { Authorization: `Bearer ${token}` },
     });
     navigate('/events'); // redirect to event list page

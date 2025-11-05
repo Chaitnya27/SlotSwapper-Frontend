@@ -14,7 +14,7 @@ const [slots, setSlots] = useState([]);
   const handleRequestSwap = async (eventId, ownerId) => {
     const token = sessionStorage.getItem('token');
     try {
-      await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/swaps', { eventId, toUserId: ownerId }, {
+      await axios.post('https://slow-swaaper-backend.vercel.app/api/swaps', { eventId, toUserId: ownerId }, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Swap request sent!');

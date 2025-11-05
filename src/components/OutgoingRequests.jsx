@@ -6,7 +6,7 @@ export default function OutgoingRequests() {
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
-    axios.get('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/swaps/outgoing', {
+    axios.get('https://slow-swaaper-backend.vercel.app/api/swaps/outgoing', {
       headers: { Authorization: `Bearer ${token}` },
     }).then(res => setRequests(res.data));
   }, []);

@@ -10,7 +10,7 @@ export default function EventList() {
   useEffect(() => {
     
     axios
-      .get('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/events', {
+      .get('https://slow-swaaper-backend.vercel.app/api/events', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setEvents(res.data))
@@ -21,7 +21,7 @@ export default function EventList() {
     if (!window.confirm('Are you sure you want to delete this event?')) return;
 
     try {
-      await axios.delete(`https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/events/${id}`, {
+      await axios.delete(`https://slow-swaaper-backend.vercel.app/api/events/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEvents(events.filter((event) => event._id !== id)); // remove from UI

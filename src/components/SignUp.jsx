@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/auth/signup', 
+      const res = await axios.post('https://slow-swaaper-backend.vercel.app/api/auth/signup', 
         formData,
         { withCredentials: true }
       );

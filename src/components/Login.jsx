@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/auth/login', formData);
+      const res = await axios.post('https://slow-swaaper-backend.vercel.app/api/auth/login', formData);
       
 
       sessionStorage.setItem('token', res.data.token);

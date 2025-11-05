@@ -17,7 +17,7 @@ export default function EditTask() {
     const fetchTask = async () => {
       const token = sessionStorage.getItem('token');
       try {
-        const res = await axios.get(`https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/events/${id}`, {
+        const res = await axios.get(`https://slow-swaaper-backend.vercel.app/api/events/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const ev = res.data;
@@ -37,7 +37,7 @@ export default function EditTask() {
     e.preventDefault();
     const token = sessionStorage.getItem('token');
     try {
-      await axios.put(`https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/events/${id}`, {
+      await axios.put(`https://slow-swaaper-backend.vercel.app/api/events/${id}`, {
         title: form.title,
         startTime: new Date(form.startTime).toISOString(),
         endTime: new Date(form.endTime).toISOString(),
