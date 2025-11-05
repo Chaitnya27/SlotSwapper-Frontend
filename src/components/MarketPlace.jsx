@@ -6,7 +6,7 @@ const [slots, setSlots] = useState([]);
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
-    axios.get('http://localhost:5000/api/marketplace', {
+    axios.get('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/marketplace', {
       headers: { Authorization: `Bearer ${token}` },
     }).then(res => setSlots(res.data));
   }, []);
@@ -14,7 +14,7 @@ const [slots, setSlots] = useState([]);
   const handleRequestSwap = async (eventId, ownerId) => {
     const token = sessionStorage.getItem('token');
     try {
-      await axios.post('http://localhost:5000/api/swaps', { eventId, toUserId: ownerId }, {
+      await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/swaps', { eventId, toUserId: ownerId }, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Swap request sent!');

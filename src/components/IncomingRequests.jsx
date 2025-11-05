@@ -6,14 +6,14 @@ export default function IncomingRequests() {
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
-    axios.get('http://localhost:5000/api/swaps/incoming', {
+    axios.get('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/swaps/incoming', {
       headers: { Authorization: `Bearer ${token}` },
     }).then(res => setRequests(res.data));
   }, []);
 
   const respondToRequest = async (id, decision) => {
     const token = sessionStorage.getItem('token');
-    await axios.put(`http://localhost:5000/api/swaps/${id}`, { status: decision }, {
+    await axios.put(`https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/swaps/${id}`, { status: decision }, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setRequests(requests.filter(req => req._id !== id));

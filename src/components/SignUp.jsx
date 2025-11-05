@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', formData);
+      const res = await axios.post('https://slow-swaaper-backend-git-main-chaitnya-khedekars-projects.vercel.app/api/auth/signup', formData);
       alert("Register Succesfully");
       navigate('/login')
       setMessage(res.data.message);
