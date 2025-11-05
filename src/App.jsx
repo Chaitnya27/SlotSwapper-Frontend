@@ -13,6 +13,7 @@ import EditTask from './components/EditTask';
 import MarketPlace from './components/MarketPlace';
 import OutgoingRequests from './components/OutgoingRequests';
 import IncomingRequests from './components/IncomingRequests';
+import NotFound from './components/NotFound';
 
 function App() {
   const ProtectedRoute = ({ children }) => {
@@ -81,6 +82,8 @@ function App() {
         />
 
         <Route path='/' element={<Navigate to='/home' />} />
+
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
