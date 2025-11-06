@@ -64,6 +64,8 @@ export default function Login() {
             Log In
           </button>
         </form>
+       <p className='text-center text-red-600'>Login is in progress. It may take a few moments due to server deployment.</p>
+
       </div>
     </div>
   )
