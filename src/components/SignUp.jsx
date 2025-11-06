@@ -68,7 +68,7 @@ export default function SignUp() {
             Register
           </button>
         </form>
-        <p className='text-center text-red-600'>Sign Up is in progress. It may take a few moments due to server deployment.</p>
+        <p className='text-center text-red-600'>Sign Up may take a few moments due to server deployment.</p>
 
       </div>
     </div>
